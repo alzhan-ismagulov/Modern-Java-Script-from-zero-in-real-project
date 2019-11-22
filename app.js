@@ -1,46 +1,40 @@
-// var, let, const
-var name = 'Denis';
-console.log(name);
-name = 'Den';
-console.log(name);
+let value;
 
-var age;
-console.log(age);
-age = 30;
-console.log(age);
+// Number to string
+value = String(10);
+value = String(10+40);
+value = (40).toString();
 
-var $name = 'Ivan';
-var _name = 'Maks';
-// var 1name = '';
+// Boolean to string
+value = String(false);
+// Array to string
+value = String([1, 2, 3]);
+// Object to string
+value = String({ name: 'Denis' });
 
-var userAge = 30;
-var user_age = 20;
-var UserAge = 40;
-var userage = 10;
+value = 30 + '' + undefined;
+value = 30 * '5';
+value = false + undefined;
 
-var car;
-console.log(car);
-car = 'bmw';
-// var car = 'audi';
-console.log(car);
-console.clear();
+// String to number
+value = Number('23');
+value = Number(false);
+value = Number(null);
+value = Number('false');
+value = Number([1,2,3]);
 
-// console.log(nickname);
-let nickname = 'dmgame';
-nickname = 'dm';
-console.log(nickname);
+value = parseInt('200px');
+value = parseFloat('200.212px');
 
-const firstName = 'Tom';
-// firstName = 'Jhon';
-// const lastName;
+// Boolean
+value = Boolean('hello');
+value = Boolean('');
+value = Boolean(-100);
+value = Boolean(0);
+value = Boolean(undefined);
+value = Boolean(null);
+value = Boolean({});
+value = Boolean([]);
 
-console.log(firstName);
-
-const user = {
-  name: 'Denis',
-  age: 30
-};
-
-user.age = 25;
-
-console.log(user);
+console.log(value);
+console.log(typeof value);
