@@ -1,33 +1,31 @@
-// Numbers
-const num1 = 10;
-const num2 = 20;
+const firstName = 'Denis';
+const lastName = 'Mescheryakov';
+const age = 30;
+const str = 'Hello my name is Denis';
+
 let value;
 
-// + * / - %
-value = num1 + num2;
-value = value + 100;
-value += 100;
-// value = 5 % 2;
-value++;
-value--;
-++value;
---value;
+value = firstName + lastName;
+value = firstName + ' ' + lastName;
+value += ' I am ' + age;
 
-value = 0.6 + 0.7;
-// value = parseFloat(value.toFixed(1));
-value = ( 0.6 * 10 + 0.7 * 10 ) / 10;
+value = firstName.length;
+value = firstName[2];
+value = firstName[4];
+value = lastName[lastName.length - 1];
+value = firstName[firstName.length - 1];
 
-// Math
-value = Math.PI;
-value = Math.random();
-value = Math.round(2.4);
-value = Math.ceil(2.1);
-value = Math.floor(2.9);
-value = Math.min(2, 12, 15, 0, 12);
+value = firstName.toUpperCase();
+value = firstName.concat(' ', lastName);
 
-value = Math.floor(Math.random() * 10 + 1);
+value = str.indexOf('n', 10);
+value = str.indexOf('!');
+value = str.includes('DENIS');
 
-const arr = ['black', 'red', 'yellow', 'pink', 'white', 'blue', 'orange', 'green'];
-value = Math.floor(Math.random() * arr.length);
+value = str.slice(0, 5);
+value = str.slice(0, -3);
 
-console.log(value, arr[value]);
+value = str.replace('Denis', 'Den');
+
+
+console.log(value);
