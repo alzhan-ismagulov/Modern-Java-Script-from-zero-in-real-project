@@ -1,42 +1,33 @@
-//Lesson5_Type conversion
-
+// Numbers
+const num1 = 10;
+const num2 = 20;
 let value;
 
-// Number to string
-value = String(10);
-value = String(10+40);
-value = (40).toString();
+// + * / - %
+value = num1 + num2;
+value = value + 100;
+value += 100;
+// value = 5 % 2;
+value++;
+value--;
+++value;
+--value;
 
-// Boolean to string
-value = String(false);
-// Array to string
-value = String([1, 2, 3]);
-// Object to string
-value = String({ name: 'Denis' });
+value = 0.6 + 0.7;
+// value = parseFloat(value.toFixed(1));
+value = ( 0.6 * 10 + 0.7 * 10 ) / 10;
 
-value = 30 + '' + undefined;
-value = 30 * '5';
-value = false + undefined;
+// Math
+value = Math.PI;
+value = Math.random();
+value = Math.round(2.4);
+value = Math.ceil(2.1);
+value = Math.floor(2.9);
+value = Math.min(2, 12, 15, 0, 12);
 
-// String to number
-value = Number('23');
-value = Number(false);
-value = Number(null);
-value = Number('false');
-value = Number([1,2,3]);
+value = Math.floor(Math.random() * 10 + 1);
 
-value = parseInt('200px');
-value = parseFloat('200.212px');
+const arr = ['black', 'red', 'yellow', 'pink', 'white', 'blue', 'orange', 'green'];
+value = Math.floor(Math.random() * arr.length);
 
-// Boolean
-value = Boolean('hello');
-value = Boolean('');
-value = Boolean(-100);
-value = Boolean(0);
-value = Boolean(undefined);
-value = Boolean(null);
-value = Boolean({});
-value = Boolean([]);
-
-console.log(value);
-console.log(typeof value);
+console.log(value, arr[value]);
