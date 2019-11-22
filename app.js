@@ -1,29 +1,38 @@
-const firstName = 'Denis';
-const lastName = 'Mescheryakov';
-const age = 30;
+const user = {
+  firstName: 'Denis',
+  age: 30,
+  isAdmin: true,
+  email: 'test@test.com',
+  'user-address': {
+    city: 'Kharkiv'
+  },
+  skills: ['html', 'css', 'js']
+};
 
-let str;
+let value;
+let prop = 'skills';
 
-str = 'Hello my name is ' + firstName + ' ' + lastName;
+value = user.firstName;
+value = user['isAdmin'];
+value = user['user-address'];
+value = user['user-address'].city;
+value = user['user-address']['city'];
+value = user[prop][0];
 
-str = '<ul>' +
-      '<li>First name: ' + firstName + '</li>' +
-      '<li>Last name: ' + lastName + '</li>' +
-      '<li>Age: ' + age + '</li>' +
-      '</ul>';
+user.firstName = 'Den';
 
-// console.log(str);
+value = user.firstName;
 
-// ES6
-str = `
-  <ul>
-    <li>First name: ${ firstName }</li>
-    <li>Last name: ${ lastName }</li>
-    <li>Age: ${ age }</li>
-    <li>Math.random: ${ Math.random() }</li>
-    <li>5 + 5: ${ 5 + 5 }</li>
-  </ul>
-`;
+user.info = 'Some info';
 
-document.body.innerHTML = str;
+value = user.info;
 
+user['user-address'].city = 'Kiev';
+user['user-address'].country = 'Ukraine';
+
+console.log(user.plan);
+user.plan = {};
+user.plan.basic = 'basic';
+
+console.log(value);
+console.log(user);
