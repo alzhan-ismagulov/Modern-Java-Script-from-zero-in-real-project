@@ -1,24 +1,23 @@
-const numArr = [2, 32, 1234, 54, 323];
+// function highOrder(value, callback) {
+//   const arrFromStr = value.split(' ');
+//   console.log(arrFromStr);
+// }
 
-let value;
+// function myCallback(char) {}
 
-value = numArr.length;
-// numArr.length = 0;
-// numArr.length = 100;
+// highOrder('Denis Mescheryakov');
 
-value = Array.isArray(numArr);
-value = numArr[2];
-numArr[2] = 12;
-value = numArr.indexOf(32);
+function question(job) {
+  const jobsDictionary = {
+    developer: 'Что такое JS?',
+    teacher: 'Какой предмет вы преподаете?',
+  };
 
-value = numArr.push(100);
-value = numArr.pop();
-value = numArr.unshift(111);
-value = numArr.shift();
-value = numArr.slice(0, 2);
-value = numArr.splice(1, 0, "one", "two");
-value = numArr.reverse();
-value = numArr.concat(1, 2);
-value = numArr.join(" ");
-value = "hello world".split(" ");
-console.log(value, numArr);
+  return function(name) {
+    return jobsDictionary[job] + ' ' + name;
+  };
+}
+
+const developerQustion = question('developer');
+console.log(developerQustion);
+console.log(developerQustion('Denis'));
