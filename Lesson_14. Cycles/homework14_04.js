@@ -7,4 +7,4 @@ for (let i = 0; i < res.length; i++) {
   res[i] = res[i].charAt(0).toUpperCase() + res[i].slice(1);
 }
 res = res.join(""); //Собираем обратно строку
-document.write(res);
+console.log(res); // Выводит JavaScriptIsAPrettyGoodLanguage
