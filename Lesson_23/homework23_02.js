@@ -16,7 +16,7 @@ const organisation = {
   name: "Google",
   info: {
     employees: ["Vlad", "Olga"],
-    partners: ["Microsoft", "Facebook", "Xing"]
+    partners: ["Microsoft", " Facebook", "Xing"]
   }
 };
 const {
@@ -24,7 +24,7 @@ const {
   info: { employees, partners }
 } = organisation;
 
-function getInfo(organisation) {
-  console.log(name + "," + partners.slice(0, 2));
-}
+getInfo = organisation =>
+  console.log("Name: " + name + ", Partners: " + partners.slice(0, 2));
+
 getInfo(organisation); //Google,Microsoft,Facebook
